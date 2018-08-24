@@ -13,8 +13,7 @@ function setup() {
 	}
 	  button = createButton('submit');
   button.position(width/2, height/2);
-  button.mousePressed(greet);
-}	
+  button.mousePressed(greet);	
 }
 
 function draw() {
