@@ -18,7 +18,7 @@ function setup() {
 function draw() {
     background(0);
     translate(width/2, height/2);
-	button.mousePressed(stars[i].warp);
+	button.mousePressed(console.log("przycisk"));
     for (i = 0; i  < stars.length; i++) {
     stars[i].show();
     stars[i].update();
