@@ -1,5 +1,6 @@
 stars = []
 stars.length = 600;
+var warp = 0;
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
@@ -18,7 +19,7 @@ function setup() {
 
 function warp() {
 		console.log("warp!");
-		stars[i].speed = 50;
+		var warp = 50;
 	}
 
 function draw() {
@@ -133,7 +134,7 @@ class Star {
         ellipse(this.sx, this.sy, this.nr, this.nr);
   	}
   	update() {
-    	this.speed = map(mouseX, 0, width, 0, 0);
+    	this.speed = warp;
 	//this.speed = 0;
      	this.z = this.z - this.speed;
      	if (this.z < 0.5) {
