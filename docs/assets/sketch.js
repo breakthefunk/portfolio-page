@@ -9,8 +9,12 @@ function setup() {
     //bg = loadImage("./assets/images/nebula,jpg");
     createCanvas(windowWidth, windowHeight);
 	for (i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
-  }
+    	stars[i] = new Star();
+	}
+	  button = createButton('submit');
+  button.position(width/2, height/2);
+  button.mousePressed(greet);
+}	
 }
 
 function draw() {
