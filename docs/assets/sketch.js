@@ -13,7 +13,6 @@ function setup() {
 	}
 	button = createButton('submit');
 	button.position(width/2, height/2);
-	button.mousePressed(stars.warp());
 }
 
 function draw() {
