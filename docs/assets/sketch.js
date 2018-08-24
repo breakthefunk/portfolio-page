@@ -44,7 +44,6 @@ class Star {
 	constructor() {
 	this.star();
     this.show();
-		this.warp();
  	}
   	star() {
         this.x = random(-width/2, width/2);
