@@ -149,6 +149,7 @@ class Star {
     }
 	warp() {
 		this.speed = 50;
+		console.log("WARP");
 	}
 		
 }
