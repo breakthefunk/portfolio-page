@@ -13,6 +13,7 @@ function setup() {
 	}
 	button = createButton('submit');
 	button.position(width/2, height/2);
+	button.mousePressed(stars.warp());
 }
 
 function draw() {
@@ -38,6 +39,7 @@ class Star {
 	constructor() {
 	this.star();
     this.show();
+		this.warp();
  	}
   	star() {
         this.x = random(-width/2, width/2);
@@ -127,7 +129,8 @@ class Star {
         ellipse(this.sx, this.sy, this.nr, this.nr);
   	}
   	update() {
-    	this.speed = map(mouseX, 0, width, 50, 50);
+    	//this.speed = map(mouseX, 0, width, 50, 50);
+	this.speed = 0;
      	this.z = this.z - this.speed;
      	if (this.z < 0.5) {
       	this.z = random(width);
@@ -144,4 +147,8 @@ class Star {
         this.xmove = random(-10,10); 
         this.ymove = random(-10,10);
     }
+	warp() {
+		this.speed = 50;
+	}
+		
 }
