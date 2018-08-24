@@ -18,10 +18,10 @@ function setup() {
 function draw() {
     background(0);
     translate(width/2, height/2);
+	button.mousePressed(stars[i].warp);
     for (i = 0; i  < stars.length; i++) {
     stars[i].show();
     stars[i].update();
-	button.mousePressed(stars[i].warp);
     if(stars[i].show() === false) {
 		stars.splice(i, 1);
 		this.x = random(-width/2, width/2);
@@ -129,7 +129,7 @@ class Star {
         ellipse(this.sx, this.sy, this.nr, this.nr);
   	}
   	update() {
-    	this.speed = map(mouseX, 0, width, 0, 50);
+    	this.speed = map(mouseX, 0, width, 0, 0);
 	//this.speed = 0;
      	this.z = this.z - this.speed;
      	if (this.z < 0.5) {
