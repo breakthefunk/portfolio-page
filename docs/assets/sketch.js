@@ -11,14 +11,19 @@ function setup() {
 	for (i = 0; i < stars.length; i++) {
 		stars[i] = new Star();
 	}
-	button = createButton('submit');
+	button = createButton('WARP');
 	button.position(width/2, height/2);
+	button.mousePressed(warp);
 }
+
+function warp() {
+		console.log("warp!");
+		stars[i].speed = 50;
+	}
 
 function draw() {
     background(0);
     translate(width/2, height/2);
-	button.mousePressed(console.log("przycisk"));
     for (i = 0; i  < stars.length; i++) {
     stars[i].show();
     stars[i].update();
@@ -147,9 +152,5 @@ class Star {
         this.xmove = random(-10,10); 
         this.ymove = random(-10,10);
     }
-	warp() {
-		this.speed = 50;
-		console.log("WARP");
-	}
 		
 }
