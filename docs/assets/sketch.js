@@ -21,6 +21,7 @@ function draw() {
     for (i = 0; i  < stars.length; i++) {
     stars[i].show();
     stars[i].update();
+	button.mousePressed(warp);
     if(stars[i].show() === false) {
 		stars.splice(i, 1);
 		this.x = random(-width/2, width/2);
