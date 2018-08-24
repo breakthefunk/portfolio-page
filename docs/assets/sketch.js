@@ -125,7 +125,7 @@ class Star {
         ellipse(this.sx, this.sy, this.nr, this.nr);
   	}
   	update() {
-    	this.speed = map(mouseX, 0, width, 100, 500);
+    	this.speed = map(mouseX, 0, width, 50, 50);
      	this.z = this.z - this.speed;
      	if (this.z < 0.5) {
       	this.z = random(width);
