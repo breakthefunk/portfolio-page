@@ -14,12 +14,20 @@ function setup() {
 	button = createButton('WARP');
 	button.position(width/2, height/2);
 	button.mousePressed(warp);
+	button.id('warp');
 }
 
 function warp() {
-		console.log("warp!");
-		var warp = 50;
-	}
+	btn = document.getElementById('warp');
+    if(speed == 0){
+        speed = 45;
+        btn.textContent = "STOP";
+    }
+    else if (speed == 45){
+        speed = 0;
+        btn.textContent = "WARP";
+    }
+}
 
 function draw() {
     background(0);
