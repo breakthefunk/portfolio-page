@@ -15,7 +15,6 @@ function setup() {
     button.position(height/2, width/2);
     button.id("warp");
     button.mousePressed(warp);
-    button.
     //bg = loadImage("./assets/images/nebula,jpg");
     createCanvas(windowWidth, windowHeight);
 	for (i = 0; i < stars.length; i++) {
