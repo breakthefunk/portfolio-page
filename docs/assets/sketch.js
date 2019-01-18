@@ -5,6 +5,10 @@ var warpSwitch
 stars = []
 stars.length = 600;
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
     speed = 0;
     button = createButton("WARP");
