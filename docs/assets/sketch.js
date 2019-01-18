@@ -18,6 +18,7 @@ function setup() {
     //bg = loadImage("./assets/images/nebula,jpg");
     var cnv = createCanvas(windowWidth, windowHeight);
 	cnv.style('display', 'block');
+	cnv.style('vertical-align', 'top');
 	for (i = 0; i < stars.length; i++) {
     stars[i] = new Star();
   }
