@@ -5,10 +5,6 @@ var warpSwitch
 stars = []
 stars.length = 600;
 
-function windowResized() {
-    resizeCanvas(1920, 1180);
-  }
-
 function setup() {
     speed = 0;
     button = createButton("WARP");
@@ -16,7 +12,7 @@ function setup() {
     button.id("warp");
     button.mousePressed(warp);
     button.
-    bg = loadImage("./assets/images/nebula,jpg");
+    //bg = loadImage("./assets/images/nebula,jpg");
     createCanvas(windowWidth, windowHeight);
 	for (i = 0; i < stars.length; i++) {
     stars[i] = new Star();
