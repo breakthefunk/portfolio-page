@@ -5,10 +5,6 @@ var warpSwitch
 stars = []
 stars.length = 600;
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function setup() {
     speed = 0;
     button = createButton("WARP");
@@ -18,10 +14,13 @@ function setup() {
     //bg = loadImage("./assets/images/nebula,jpg");
     var cnv = createCanvas(windowWidth, windowHeight);
 	cnv.style('display', 'block');
-	//cnv.style('vertical-align', 'top');
 	for (i = 0; i < stars.length; i++) {
-    stars[i] = new Star();
-  }
+    	stars[i] = new Star();
+  	}
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
