@@ -13,8 +13,8 @@ function setup() {
     button.mousePressed(warp);
     //bg = loadImage("./assets/images/nebula,jpg");
     var cnv = createCanvas(windowWidth, windowHeight);
-	cnv.style('display', 'block');
-	for (i = 0; i < stars.length; i++) {
+	  cnv.style('display', 'block');
+	  for (i = 0; i < stars.length; i++) {
     	stars[i] = new Star();
   	}
 }
@@ -27,37 +27,37 @@ function draw() {
     background(0);
     translate(width/2, height/2);
     for (i = 0; i  < stars.length; i++) {
-    stars[i].show();
-    stars[i].update();
-    if(stars[i].show() === false) {
-		stars.splice(i, 1);
-		this.x = random(-width/2, width/2);
-        this.y = random(-height/2, height/2);
-        this.z = random(width);
-        stars.push(new Star(this.x,this.y, this.z));
+      stars[i].show();
+      stars[i].update();
+      if(stars[i].show() === false) {
+		  stars.splice(i, 1);
+		  this.x = random(-width/2, width/2);
+      this.y = random(-height/2, height/2);
+      this.z = random(width);
+      stars.push(new Star(this.x,this.y, this.z));
     }
   }
   if(frameCount % 100 == 0 ){
-		randomStar = random(stars); 
+    randomStar = random(stars); 
 		randomStar.shoot();
-    }
+  }
 }
 
 function warp(){
     btn = document.getElementById('warp');
     if(speed == 0){
-        speed = 45;
-        btn.textContent = "STOP";
+      speed = 45;
+      btn.textContent = "STOP";
     }
     else if (speed == 45){
-        speed = 0;
-        btn.textContent = "WARP";
+      speed = 0;
+      btn.textContent = "WARP";
     }
 }
 
 class Star {
 	constructor() {
-	this.star();
+    this.star();
     this.show();
  	}
   	star() {
